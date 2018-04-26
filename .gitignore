@@ -1,0 +1,5 @@
+*.pyc
+push to github.py
+*.log
+dist
+build
