@@ -77,7 +77,7 @@ class OtherWidgets(GridLayout):
 		reviewButton = Button(text = "Review: {}".format(len(self.controller.controller.toReview)))
 		self.add_widget(reviewButton)
 		if len(self.controller.controller.toReview) == 0:
-			self.reviewButton.disabled = True
+			reviewButton.disabled = True
 		reviewButton.bind(on_release=lambda w: threading.Thread(target = lambda: self.controller.reviewLesson(w, None), daemon = True).start())
 
 		buttonDecksAndLevels = Button(text = "Decks and Levels")

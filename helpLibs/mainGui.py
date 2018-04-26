@@ -127,15 +127,15 @@ class mApp(App):
 		workloc = buf.value + '\PySrs'
 		confile = workloc + '\config.ini'
 
-		Config.setdefaults('GENERAL', {'cwd': workloc,
-						 'month': 30,
-						 'workdoc': workloc + '\sentences.csv',
-						 'hwdoc': '\history.csv',
-						 'fname': 'data',
-						 'images':'pics',
-						 'backups': workloc + '\\backups\\',
-						 'reviewPerLesson': 25,
-						 'defaultLang': 'None'})
+		# Config.setdefaults('GENERAL', {'cwd': workloc,
+		# 				 'month': 30,
+		# 				 'workdoc': workloc + '\sentences.csv',
+		# 				 'hwdoc': '\history.csv',
+		# 				 'fname': 'data',
+		# 				 'images':'pics',
+		# 				 'backups': workloc + '\\backups\\',
+		# 				 'reviewPerLesson': 25,
+		# 				 'defaultLang': 'None'})
 
 	def build_settings(self, settings):
 		settings.add_json_panel('Settings', consts.Config, data = json_settings)

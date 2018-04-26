@@ -78,6 +78,15 @@ os.environ['KIVY_NO_FILELOG'] = '1'
 
 from kivy.config import Config
 Config.read(confile)
+Config.setdefaults('GENERAL', {'cwd': workloc,
+						 'month': 30,
+						 'workdoc': workloc + '\sentences.csv',
+						 'hwdoc': '\history.csv',
+						 'fname': 'data',
+						 'images':'pics',
+						 'backups': workloc + '\\backups\\',
+						 'reviewPerLesson': 25,
+						 'defaultLang': 'None'})
 
 def cwd():
 	Config.read(confile)
