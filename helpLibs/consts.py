@@ -76,6 +76,9 @@ import os
 os.environ['KIVY_HOME'] = workloc
 os.environ['KIVY_NO_FILELOG'] = '1'
 
+if not os.path.isdir(workloc):
+	os.makedirs(workloc)
+
 from kivy.config import Config
 Config.read(confile)
 Config.setdefaults('GENERAL', {'cwd': workloc,
